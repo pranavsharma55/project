@@ -1,0 +1,52 @@
+<div class="jumbotron text-center">
+    <h1>Select City</h1>
+
+    <p>{{ tagline }}</p>
+
+
+
+   <div>
+        <center>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>City ID</th>
+                        
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+
+
+                        <td>
+                        <form>
+                        <select ng-model="myVar">
+                        <option value="Chandigarh">Chandigarh
+                        <option value="Delhi">Delhi
+                        </select>
+                        </td>
+                        </form>
+                        <td>
+                        <div ng-switch="myVar">
+                        <div ng-switch-when="Delhi">
+                          
+     
+                        
+ 
+
+
+                        <td><button ng-click="addCity(city)" class="btn btn-primary">Add </button></td>
+
+                        <td><button ng-click="updateCity(city)" class="btn btn-primary">Update</button></td>
+
+                    </tr>
+                    <tr ng-repeat=" city in cityList">
+                        <td>{{city.city}}</td>
+                        <td><button ng-click="removeCity(city)" class="btn btn-danger">Remove</button></td>
+                        <td><button ng-click="editCity(city)" class="btn btn-primary">Edit</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </center>
+    </div>
